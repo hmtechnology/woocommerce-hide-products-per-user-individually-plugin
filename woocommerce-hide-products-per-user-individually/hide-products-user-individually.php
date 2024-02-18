@@ -7,7 +7,7 @@ Author: hmtechnology
 Author URI: https://github.com/hmtechnology
 License: GNU General Public License v3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
-Plugin URI: https://github.com/hmtechnology
+Plugin URI: https://github.com/hmtechnology/woocommerce-hide-products-per-user-individually-plugin
 */
 
 // Add Product Cat custom fields to user profile
