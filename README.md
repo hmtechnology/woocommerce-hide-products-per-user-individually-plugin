@@ -2,7 +2,7 @@
 
 ## Description
 
-The WooCommerce - Hide Products per User Individually plugin empowers WooCommerce store owners to customize product visibility on a per-user basis. With this plugin, individual users can hide specific product categories according to their preferences. This enhances user experience by tailoring product displays to each user's needs.
+The WooCommerce Hide Products per User Individually plugin empowers WooCommerce store owners to customize product visibility on a per-user basis. With this plugin, individual users can hide specific product categories according to their preferences. This enhances user experience by tailoring product displays to each user's needs.
 
 ## Features
 
