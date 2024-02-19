@@ -1,6 +1,6 @@
 <?php 
 /*
-Plugin Name: WooCommerce - Hide Products per user individually
+Plugin Name: WooCommerce Hide Products per user individually
 Description: Allows to hide specific woocommerce product categories per individual user.
 Version: 1.0
 Author: hmtechnology
