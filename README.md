@@ -25,6 +25,9 @@ The WooCommerce - Hide Products per User Individually plugin empowers WooCommerc
 2. Configure the visibility of each category you wish to hide.
 3. Save your settings to apply the changes immediately.
 
+## Screenshot
+![Screen](https://github.com/hmtechnology/woocommerce-hide-products-per-user-individually-plugin/blob/main/screenshot/woocommerce-hide-products-per-user-individually.jpg)
+
 ## Contributing
 Contributions are welcome! If you have any improvements or new features to suggest, please open an issue or submit a pull request. We appreciate your feedback.
 
