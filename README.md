@@ -1,4 +1,4 @@
-# WooCommerce - Hide Products per User Individually
+# WooCommerce Hide Products per User Individually
 
 ## Description
 
