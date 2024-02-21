@@ -115,19 +115,31 @@ function hide_categories_in_sidebar_for_users($terms, $taxonomies, $args) {
 }
 add_filter('get_terms', 'hide_categories_in_sidebar_for_users', 10, 3);
 
-// Function to redirect user to shop page if accessing hidden product category
-function redirect_to_shop_page_for_hidden_categories() {
+// Function to redirect user to shop page if accessing hidden product category or product
+function redirect_to_shop_page_for_hidden_categories_or_products() {
     if (is_user_logged_in()) {
         $current_user = wp_get_current_user();
         $user_hidden_categories = get_user_meta($current_user->ID, 'hidden_product_categories', true);
 
         if (!empty($user_hidden_categories)) {
-            $queried_object = get_queried_object();
-            if (is_product_category() && in_array($queried_object->slug, $user_hidden_categories)) {
-                wp_redirect(get_permalink(wc_get_page_id('shop')));
-                exit;
+            if (is_product()) {
+                global $post;
+                $product_id = $post->ID;
+                $product_categories = wp_get_post_terms($product_id, 'product_cat', array('fields' => 'slugs'));
+                if (array_intersect($user_hidden_categories, $product_categories)) {
+                    wp_redirect(get_permalink(wc_get_page_id('shop')));
+                    exit;
+                }
+            }
+
+            if (is_product_category()) {
+                $queried_object = get_queried_object();
+                if (in_array($queried_object->slug, $user_hidden_categories)) {
+                    wp_redirect(get_permalink(wc_get_page_id('shop')));
+                    exit;
+                }
             }
         }
     }
 }
-add_action('template_redirect', 'redirect_to_shop_page_for_hidden_categories');
+add_action('template_redirect', 'redirect_to_shop_page_for_hidden_categories_or_products');
