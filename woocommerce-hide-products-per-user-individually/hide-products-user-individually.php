@@ -105,7 +105,7 @@ function hide_categories_in_sidebar_for_users($terms, $taxonomies, $args) {
 
         if (!empty($user_hidden_categories)) {
             foreach ($terms as $key => $term) {
-                if (in_array($term->slug, $user_hidden_categories)) {
+                if (is_object($term) && property_exists($term, 'slug') && in_array($term->slug, $user_hidden_categories)) {
                     unset($terms[$key]);
                 }
             }
